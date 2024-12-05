@@ -1,3 +1,15 @@
 {
-  "extends": ["next/core-web-vitals", "next/typescript"]
+  "extends": ["next/core-web-vitals", "next/typescript"],
+  "rules": {
+    "no-unused-vars": "error", //disallows unused cariables and functions
+    "no-console": "error",
+    "prefer-const": "error", //Disallows let if variables are not reassigned
+    "quotes": "error", //enforces the use of double quotes over single quotes
+    "semi": "error", //Enforces semicolons at the end of statements
+    "no-multiple-empty-lines": ["error", {"max":1}], //Disallows multiple empty lines
+    "no-extra-semi": "error", //Disallows unnecessary semicolons
+    "camelcase": "error" // Enforces camelCase naming convention
+
+
+  }
 }
