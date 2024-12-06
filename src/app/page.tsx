@@ -12,6 +12,18 @@ export default function Home() {
           height={38}
           priority
         />
+        <iframe
+          src="https://giphy.com/embed/l3vRlT2k2L35Cnn5C"
+          width="480"
+          height="384"
+          className="giphy-embed"
+          allowFullScreen
+        ></iframe>
+        <p>
+          <a href="https://giphy.com/gifs/dance-donald-l3vRlT2k2L35Cnn5C">
+            via GIPHY
+          </a>
+        </p>
         <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
           <li className="mb-2">
             Get started by editing{" A message from your past self "}
