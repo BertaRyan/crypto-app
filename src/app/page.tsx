@@ -4,13 +4,9 @@ import StoreProvider from "./StoreProvider";
 import { useAppSelector, useAppDispatch } from "./lib/hooks";
 import { addTodoFunction, toggleTodoFunction } from "./lib/features/todo";
 
-interface Todo {
-  value: string;
-  id: number;
-  completed: boolean;
+function addTodoArg(arg: any) {
+  return arg;
 }
-
-function addTodoArg(_: Todo) {}
 
 const List = () => {
   const state = useAppSelector((state) => state);
@@ -22,7 +18,11 @@ const List = () => {
         onClick={() =>
           dispatch(
             addTodoFunction(
-              addTodoArg({ value: "task", id: 1, completed: false })
+              addTodoArg({
+                value: "task",
+                id: Math.random() * 300,
+                completed: false,
+              })
             )
           )
         }
@@ -32,7 +32,7 @@ const List = () => {
 
       {state.map((todo) => (
         <li key={todo.id}>
-          {todo.value} id: {todo.id}
+          {todo.value}
           <button
             onClick={() => dispatch(toggleTodoFunction(addTodoArg(todo)))}
           >
