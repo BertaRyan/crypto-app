@@ -10,7 +10,7 @@ interface Todo {
   completed: boolean;
 }
 
-function addTodoArg(arg: Todo) {}
+function addTodoArg(_: Todo) {}
 
 const List = () => {
   const state = useAppSelector((state) => state);
