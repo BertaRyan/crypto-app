@@ -11,7 +11,8 @@
     "camelcase": "error", // Enforces camelCase naming convention
     "react/no-array-index-key":"warn",
     "react/react-in-jsx-scope": "off",
-    "no-undef": "off"
+    "no-undef": "off",
+    "@typescript-eslint/no-explicit-any": "off"
   },
   "plugins": ["react"],
   
