@@ -14,7 +14,7 @@ const List = () => {
 
   return (
     <div>
-      <h1>Wow this is cool!</h1>
+      <h1>Wow this is cool</h1>
       <button
         onClick={() =>
           dispatch(
@@ -30,9 +30,9 @@ const List = () => {
         Add stuff
       </button>
 
-      {state.todos.map((todo: any) => (
+      {state.todos.map((todo: any, i: number) => (
         <li key={todo.id}>
-          {todo.value}
+          {todo.value}-{i + 1}
           <button
             onClick={() => dispatch(toggleTodoFunction(addTodoArg(todo)))}>
             {todo.completed ? "done" : "pending"}
