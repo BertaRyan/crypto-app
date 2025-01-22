@@ -13,7 +13,7 @@ const List = () => {
   const dispatch = useAppDispatch();
 
   return (
-    <div>
+    <div className="list-container">
       <h1>Wow this is cool</h1>
       <button
         onClick={() =>
@@ -29,16 +29,17 @@ const List = () => {
         }>
         Add stuff
       </button>
-
-      {state.todos.map((todo: any, i: number) => (
-        <li key={todo.id}>
-          {todo.value}-{i + 1}
-          <button
-            onClick={() => dispatch(toggleTodoFunction(addTodoArg(todo)))}>
-            {todo.completed ? "done" : "pending"}
-          </button>
-        </li>
-      ))}
+      <ul>
+        {state.todos.map((todo: any, i: number) => (
+          <li key={todo.id}>
+            {todo.value}-{i + 1}
+            <button
+              onClick={() => dispatch(toggleTodoFunction(addTodoArg(todo)))}>
+              {todo.completed ? "done" : "pending"}
+            </button>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };
