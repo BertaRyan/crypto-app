@@ -25,17 +25,15 @@ const List = () => {
               })
             )
           )
-        }
-      >
+        }>
         Add stuff
       </button>
 
-      {state.map((todo) => (
+      {state.todos.map((todo: any) => (
         <li key={todo.id}>
           {todo.value}
           <button
-            onClick={() => dispatch(toggleTodoFunction(addTodoArg(todo)))}
-          >
+            onClick={() => dispatch(toggleTodoFunction(addTodoArg(todo)))}>
             {todo.completed ? "done" : "pending"}
           </button>
         </li>

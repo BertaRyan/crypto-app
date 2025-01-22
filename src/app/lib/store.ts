@@ -3,7 +3,9 @@ import todosReducer from "./features/todo";
 
 export const makeStore = () => {
   return configureStore({
-   reducer: todosReducer,
+   reducer: {
+    todos: todosReducer,
+   }
   });
 };
 
