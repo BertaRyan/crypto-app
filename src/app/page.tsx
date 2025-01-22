@@ -14,6 +14,7 @@ const List = () => {
 
   return (
     <div>
+      <h1>Wow this is cool!</h1>
       <button
         onClick={() =>
           dispatch(
